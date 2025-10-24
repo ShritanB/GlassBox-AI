@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 224 71% 4%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 224 71% 4%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71% 4%;
+
+  --primary: 222 47% 11%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 11%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 222 47% 11%;
+
+  --radius: 0.75rem;
+
+  --node-subquestion: #4f46e5;
+  --node-claim: #475569;
+  --node-evidence: #0f9f6e;
+  --node-assumption: #d97706;
+  --node-computation: #7c3aed;
+  --node-answer: #2563eb;
+  --node-text: #f8fafc;
+  --node-border-soft: rgba(248, 250, 252, 0.6);
+  --node-border-strong: rgba(15, 23, 42, 0.85);
+  --node-shadow: rgba(15, 23, 42, 0.18);
+  --edge-default: #1f2937;
+  --edge-contradict: #dc2626;
+  --edge-label: #1f2937;
+  --graph-grid: #e2e8f0;
+}
+
+.dark {
+  --background: 224 40% 10%;
+  --foreground: 210 40% 96%;
+
+  --card: 217 33% 17%;
+  --card-foreground: 210 40% 96%;
+
+  --popover: 217 33% 17%;
+  --popover-foreground: 210 40% 96%;
+
+  --primary: 213 94% 68%;
+  --primary-foreground: 222 47% 11%;
+
+  --secondary: 215 30% 23%;
+  --secondary-foreground: 210 40% 96%;
+
+  --muted: 215 30% 23%;
+  --muted-foreground: 215 20% 75%;
+
+  --accent: 215 30% 23%;
+  --accent-foreground: 210 40% 96%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 96%;
+
+  --border: 215 27% 28%;
+  --input: 215 27% 28%;
+  --ring: 213 94% 68%;
+
+  --node-subquestion: #a5b4fc;
+  --node-claim: #cbd5f5;
+  --node-evidence: #6ee7b7;
+  --node-assumption: #fbbf24;
+  --node-computation: #c4b5fd;
+  --node-answer: #93c5fd;
+  --node-text: #0f172a;
+  --node-border-soft: rgba(148, 163, 184, 0.55);
+  --node-border-strong: rgba(226, 232, 240, 0.9);
+  --node-shadow: rgba(15, 23, 42, 0.55);
+  --edge-default: #e2e8f0;
+  --edge-contradict: #f87171;
+  --edge-label: #e2e8f0;
+  --graph-grid: #1e293b;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.6);
+  border-radius: 9999px;
+}
