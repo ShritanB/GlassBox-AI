@@ -1,4 +1,4 @@
-# Visual Chain-of-Thought (V-CoT)
+# GlassBox-AI
 
 Visualize, inspect, and challenge model-produced reasoning graphs. This MVP ships a Next.js + React Flow front end, validated API routes, and a mock LLM adapter so you can focus on extending the reasoning engine.
 
@@ -29,10 +29,10 @@ Visualize, inspect, and challenge model-produced reasoning graphs. This MVP ship
 
 ## Usage tips
 
-- **Mock data**: The “Use mock data” toggle (enabled by default) calls the canned graph in `lib/mock.ts`. Turn it off to route through `lib/llm.ts`, which currently returns the same mock but is ready for your LLM integration.
-- **Anthropic live mode**: Disable “Use mock data” and set `LLM_PROVIDER=anthropic` plus `ANTHROPIC_API_KEY` to request reasoning graphs from Claude (Sonnet).
-- **Challenging nodes**: Select any node and click “Challenge node” to request counter-evidence. In mock mode this returns a stored contradicting subgraph.
-- **Collapsing subtrees**: Use “Collapse children” in the inspector to declutter the graph without losing data. Collapsed nodes get a double-ring highlight.
+- **Mock data**: The "Use mock data" toggle (enabled by default) calls the canned graph in `lib/mock.ts`. Turn it off to route through `lib/llm.ts`, which currently returns the same mock but is ready for your LLM integration.
+- **Anthropic live mode**: Disable "Use mock data" and set `LLM_PROVIDER=anthropic` plus `ANTHROPIC_API_KEY` to request reasoning graphs from Claude (Sonnet).
+- **Challenging nodes**: Select any node and click "Challenge node" to request counter-evidence. In mock mode this returns a stored contradicting subgraph.
+- **Collapsing subtrees**: Use "Collapse children" in the inspector to declutter the graph without losing data. Collapsed nodes get a double-ring highlight.
 
 ## LLM integration
 
@@ -59,7 +59,7 @@ Visualize, inspect, and challenge model-produced reasoning graphs. This MVP ship
 - `components/PromptPanel.tsx` – Prompt, detail, domain, and mock controls.
 - `components/GraphView.tsx` – Layout and render of the reasoning graph via React Flow.
 - `components/NodeInspector.tsx` – Node details, citations, and challenge controls.
-- `components/AnswerBar.tsx` – Summary strip with confidence and “What would change my mind?” dropdown.
+- `components/AnswerBar.tsx` – Summary strip with confidence and "What would change my mind?" dropdown.
 - `lib/mock.ts` – Sample reasoning graph and challenge patch.
 - `lib/llm.ts` – Adapter and prompt builder with stubbed model calls.
 - `lib/utils.ts` – Helper utilities including graph patch merging.
